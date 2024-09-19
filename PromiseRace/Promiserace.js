@@ -12,7 +12,7 @@ Promise.race([promise1, promise2, promise3])
 
     
     const promise4 = new Promise((resolve) => setTimeout(resolve, 1000, 'Promise 4 resolved'));
-    const promise5= new Promise((_, reject) => setTimeout(reject, 500, 'Promise 5 rejected'));
+    const promise5= new Promise((_, reject) => setTimeout(reject, 500, 'Promise 5 rejected' ));
     
     Promise.race([promise1, promise2])
         .then(result => {
