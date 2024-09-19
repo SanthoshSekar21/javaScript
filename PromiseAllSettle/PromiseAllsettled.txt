@@ -1,0 +1,21 @@
+------------------------------Promise.allSettled()---------------------------
+Promise.allSettled() is a method in JavaScript for working with multiple Promises 
+when you want to wait for all of them to either resolve or reject. Unlike Promise.all(), 
+which short-circuits on the first rejection, Promise.allSettled() waits for every single Promise to settle 
+(either fulfilled or rejected),giving you the results for all of them, regardless of their outcome.
+ 
+ Output: It returns a new Promise that resolves after all of the input Promises have either resolved or rejected. 
+ This new Promise is fulfilled with an array of objects,
+  where each object represents the outcome of each input Promise:
+
+
+ If a Promise is fulfilled, the object will have a property "status": "fulfilled"
+and a value with the result of the Promise.
+If a Promise is rejected, the object will have a property "status": "rejected" 
+and a reason indicating why it was rejected.
+ ----------------------basic Syntax----------------------
+ Promise.allSettled([promise1, promise2, promise3])
+    .then(results => {
+        // `results` is an array of objects with the status and value/reason of each Promise
+        console.log(results);
+    });
