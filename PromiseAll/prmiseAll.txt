@@ -1,0 +1,15 @@
+/*Promise.all() is a powerful method provided by JavaScript for working with multiple Promises concurrently.
+
+It allows you to execute multiple asynchronous operations in parallel and waits until all of them are either fulfilled
+ or one of them rejects. This can significantly improve performance 
+ when you're dealing with tasks that don't depend on each other but must complete together, 
+like fetching data from multiple APIs.*/
+--------what is Do------------
+Promise.all() takes an iterable (usually an array) of Promises as input and returns a new Promise.
+ This new Promise will:
+ Resolve when all the input Promises are resolved.
+Reject if any one of the input Promises rejects.
+When the Promise returned by Promise.all() is resolved, 
+it resolves with an array of results, where each result corresponds to the resolution of each input Promise in the same order
+ as they were passed in. 
+If any Promise rejects, the entire Promise.all() is rejected with the reason of the first rejected Promise.
