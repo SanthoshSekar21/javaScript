@@ -7,7 +7,7 @@
 // it rejects with an AggregateError, which is a special error type that holds all the rejection reasons.
 const promise1 = new Promise((resolve, reject) => setTimeout(reject, 1000, 'Promise 1 rejected'));
 const promise2 = new Promise((resolve, reject) => setTimeout(resolve, 2000, 'Promise 2 resolved'));
-const promise3 = new Promise((resolve, reject) => setTimeout(resolve, 1500, 'Promise 3 resolved'));
+const promise3 = new Promise((resolve, reject) =>   setTimeout(resolve, 1500, 'Promise 3 resolved'));
 
 Promise.any([promise1, promise2, promise3])
     .then(result => {
